@@ -1,16 +1,11 @@
 import streamlit as st
 import joblib
 from PIL import Image
-model=joblib.load('car-price-predictor')
+model=joblib.load('car-price-predictor-model')
 
 st.title("Welcome to car price predictor")
 st.header("In this model we will predict the price of car according to the specifications you want")
 
-
-#st.success("This is used to display Success messages in a green box")
-#st.warning("This is used to display Warning message in orange box")
-#st.error("This is used to display Error messages in red box")
-#st.info("This is used to display Information in a blue box")
 with st.container():
     image=Image.open('pexels-jay-pizzle-3802510.jpg')
     st.image(image)
@@ -122,28 +117,5 @@ if submit_btn==True:
         result=result*80
         st.write("The predicted price is ",result)
 
-#st.selectbox('Select', [1,2,3])
 
-#df=pd.read_csv('CarPrice.csv')
-#newdf=df[['Price']]
 
-#st.button('Hit me')
-#st.data_editor('Edit data', data)
-#st.checkbox('Check me out')
-#st.radio('Pick one:', ['nose','ear'])
-#st.selectbox('Select', [1,2,3])
-#st.multiselect('Multiselect', [1,2,3])
-#st.slider('Slide me', min_value=0, max_value=10)
-#st.select_slider('Slide to select', options=[1,2,3,4,5,6],value=('red','blue','a','b','c','d'))
-#st.write("You selected the option",option)
-#st.text_input('Enter some text')
-#st.number_input('Enter a number')
-#st.text_area('Area for textual entry')
-#st.date_input('Date input')
-#st.time_input('Time entry')
-#st.file_uploader('File uploader')
-#st.download_button('On the dl', data)
-#st.camera_input("一二三,茄子!")
-#st.color_picker('Pick a color')
-
-#gose jose portelia introduction to machine learning and data science amster class
